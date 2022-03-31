@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import "../css/homePage.css"
 
 
 const Home = () => {
 
+// const  [feature,setFeature] = useState({});
+
+   
+//   useEffect(() => {
+//    Home();
+//  }, []);
 
    return (
        <div>
-            <p>Hullo</p>
            
-         <form>
+           
+         <form className="form">
             <div id="inputType">
              <input type='radio' id='meeting' name='type' value='meeting'/>
             <label>Meeting</label>

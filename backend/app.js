@@ -7,8 +7,8 @@ const port = process.env.PORT;
 const app = express();
 const path = require('path');
 
-
-const PORT = process.env.PORT;
+const PORT = 3000
+//const PORT = process.env.PORT;
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
