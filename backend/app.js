@@ -3,15 +3,18 @@ const http = require("http");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 require("dotenv").config();
-const port = process.env.PORT;
+const PORT = process.env.PORT;
 const app = express();
 const path = require('path');
 
-const PORT = 3000
-//const PORT = process.env.PORT;
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
+const meetingRouter = require("../Frontend/routes/meeting_route")
+
+app.use ("/api/meetings", meetingRouter)
+
 
 app.use((err, req, res, next) => {
     console.log(err);
